@@ -1,0 +1,15 @@
+vbell off
+autodetach on
+defscrollback 10000
+startup_message off # Turn off the splash screen
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+caption always "%{= gk}%-Lw%{= rW}%50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
+shell -$SHELL
+#startup
+logfile screenlogs/log.%n
+deflog on
+termcapinfo xterm*|rxvt* 'ti@:te@'
+#other settings
+# hardstatus alwayslastline                                                                                                                          
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+# system status from launch3 caption always "%{= bC}%-Lw%{= gW}%50> %n%f* %t %{-}%+Lw%< %= %{= BW} %H %{= gk} %l %{= Bw} %0c:%s %d/%m %{-}"

@@ -1,0 +1,8 @@
+include "qc.szl";
+include "qc_common.szl";
+
+toppunits: table top(100) of punit:string weight count:int;
+
+if (StartsWith(in.punit, "/p/mc") && strfind("_imp.", in.url) > -1) {
+  emit toppunits <- in.punit weight 1;
+}

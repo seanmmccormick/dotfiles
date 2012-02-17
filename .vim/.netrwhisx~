@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/smccormick/investigate-adtrain'
+let g:netrw_dirhist_2='/Users/smccormick/git/rmr/rmr-full/build'
+let g:netrw_dirhist_3='/Users/smccormick/.vim/ftdetect'
+let g:netrw_dirhist_4='/Users/smccormick'
+let g:netrw_dirhist_5='/Users/smccormick/local/code/spreadsheet/WayneYang-2012-01-09'

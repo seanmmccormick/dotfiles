@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/smccormick/.ssh'
+let g:netrw_dirhist_2='/Users/smccormick'
+let g:netrw_dirhist_3='/Users/smccormick/.ssh'
+let g:netrw_dirhist_4='/Users/smccormick/local/code/spreadsheet/DeeptiBuchi-2011-09-21/test'

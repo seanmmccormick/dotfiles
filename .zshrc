@@ -26,6 +26,8 @@ plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
+export SBT_OPTS="-Xss2m"
+
 # Customize to your needs...
-PATH=$PATH:~/bin
+PATH=~/bin:$PATH
 bindkey "^[." insert-last-word 

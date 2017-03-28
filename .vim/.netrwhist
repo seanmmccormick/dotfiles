@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/seanm/dev/element-workbench/backend/workbench/src/main/scala/com'
-let g:netrw_dirhist_2='/Users/seanm/dev/element-workbench/backend/workbench/src/main/scala/com/elementanalytics'
-let g:netrw_dirhist_3='/Users/seanm/dev/element-workbench/backend/build'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/seanm/dev/element-workbench/backend/project'
+let g:netrw_dirhist_2='/Users/seanm/dev/element-workbench/backend'
+let g:netrw_dirhist_3='/Users/seanm/dev/element-workbench/backend/workbench'
 let g:netrw_dirhist_4='/Users/seanm/dev/element-workbench/backend'
-let g:netrw_dirhist_5='/Users/seanm/dev/element-workbench/backend/build'
+let g:netrw_dirhist_5='/Users/seanm/dev/element-workbench/backend/project'
+let g:netrw_dirhist_6='/Users/seanm/dev/element-workbench/backend'
+let g:netrw_dirhist_7='/Users/seanm/dev/share/neo4j/enterprise/query-logging/src/test/java/org/neo4j/kernel/impl/query'

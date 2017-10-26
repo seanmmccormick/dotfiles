@@ -1,0 +1,5 @@
+*.sc
+.DS_Store
+*.iml
+.idea
+*.sw?

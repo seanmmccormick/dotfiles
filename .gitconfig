@@ -1,0 +1,22 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  re = remote
+  lg = log --oneline
+  pr = pull-request
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[user]
+	email = sean@elementanalytics.com
+	name = Sean McCormick
+[core]
+	excludesfile = /Users/seanm/.gitignore
+[push]
+	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f

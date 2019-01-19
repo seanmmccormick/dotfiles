@@ -37,9 +37,12 @@ export SBT_OPTS="-Xss2m"
 PATH=~/bin:/usr/local/bin:$PATH:/usr/local/sbin
 bindkey "^[." insert-last-word 
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 alias kc=kubectl
+
+export GOPATH=$HOME/dev/go
+
+source /usr/local/opt/asdf/asdf.sh
+
+source ~/.zshrc_local
 
 . ~/dev/share/azure-cli/az.completion

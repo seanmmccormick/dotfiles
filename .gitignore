@@ -3,3 +3,4 @@
 *.iml
 .idea
 *.sw?
+.vim/.netrwhist

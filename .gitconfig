@@ -10,10 +10,11 @@
   type = cat-file -t
   dump = cat-file -p
 [user]
-	email = sean@elementanalytics.com
+	email = elementsean@users.noreply.github.com
 	name = Sean McCormick
 [core]
 	excludesfile = /Users/seanm/.gitignore
+	editor = /usr/bin/vim
 [push]
 	default = simple
 [filter "lfs"]

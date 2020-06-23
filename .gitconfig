@@ -4,19 +4,22 @@
   st = status
   br = branch
   re = remote
-  lg = log --oneline
+  lo = log --oneline
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   pr = pull-request
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 [user]
-	email = elementsean@users.noreply.github.com
+	email = seanmmccormick@users.noreply.github.com
 	name = Sean McCormick
 [core]
 	excludesfile = /Users/seanm/.gitignore
 	editor = /usr/bin/vim
+	autocrlf = false
 [push]
 	default = simple
+	followTags = true
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean %f

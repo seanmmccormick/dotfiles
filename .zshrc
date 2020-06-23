@@ -41,8 +41,6 @@ alias kc=kubectl
 
 export GOPATH=$HOME/dev/go
 
-source /usr/local/opt/asdf/asdf.sh
-
 source ~/.zshrc_local
 
 . ~/dev/share/azure-cli/az.completion

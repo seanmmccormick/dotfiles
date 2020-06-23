@@ -16,6 +16,10 @@ Plugin 'avakhov/vim-yaml'
 Plugin 'repos-scala/scala-vundle'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'faith/vim-go'
+Plugin 'towolf/vim-helm'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tsandall/vim-rego'
 
 "
 " The following are examples of different formats supported.

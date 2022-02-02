@@ -35,12 +35,17 @@ export SBT_OPTS="-Xss2m"
 # Customize to your needs...
 # SM [2017-10-25]: move /usr/local/bin before the path to override system installs in favor of homebrew installs
 PATH=~/bin:/usr/local/bin:$PATH:/usr/local/sbin
-bindkey "^[." insert-last-word 
+bindkey "^[." insert-last-word
 
+# developer aliases
 alias kc=kubectl
-
+alias kx=kubectx
+alias cfgr=python3 -m configurender
 export GOPATH=$HOME/dev/go
 
 source ~/.zshrc_local
 
 . ~/dev/share/azure-cli/az.completion
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform

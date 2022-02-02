@@ -13,6 +13,9 @@
 [user]
 	email = seanmmccormick@users.noreply.github.com
 	name = Sean McCormick
+    signingkey = BC5BEAB2B51FC2D07576F3DD7CB23FAACCB84C2E
+[commit]
+    # gpgsign = true
 [core]
 	excludesfile = /Users/seanm/.gitignore
 	editor = /usr/bin/vim
@@ -24,3 +27,9 @@
 	required = true
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
+[submodule]
+	recurse = true
+[diff]
+	submodule = log
+[status]
+	submoduleSummary = true

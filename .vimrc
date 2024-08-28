@@ -22,6 +22,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tsandall/vim-rego'
 Plugin 'hashivim/vim-terraform'
 
+
 "
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.

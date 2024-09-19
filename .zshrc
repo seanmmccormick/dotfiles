@@ -68,3 +68,6 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Set up the bin directory for pipx 
+PATH=$PATH:~/.local/bin

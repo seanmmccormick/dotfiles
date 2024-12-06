@@ -46,9 +46,9 @@ if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
 fi
 
 # developer aliases
+alias uuidlower="uuidgen | tr A-Z a-z"
 alias kc=kubectl
 alias kx=kubectx
-alias cfgr=python3 -m configurender
 export GOPATH=$HOME/dev/go
 
 source ~/.zshrc_local
@@ -71,3 +71,4 @@ eval "$(pyenv virtualenv-init -)"
 
 # Set up the bin directory for pipx 
 PATH=$PATH:~/.local/bin
+

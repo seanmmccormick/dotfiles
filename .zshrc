@@ -1,11 +1,24 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #export ZSH_THEME="robbyrussell"
-export ZSH_THEME="xiong-chiamiov-plus-2"
+
+# Commented out Dec, 6, '24
+# export ZSH_THEME="xiong-chiamiov-plus-2"
+
+# Testing Powerlevel10k 12/6/24
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
@@ -28,22 +41,13 @@ plugins=(git vi-mode brew osx)
 
 source $ZSH/oh-my-zsh.sh
 
-export SBT_OPTS="-Xss2m"
-[[ -o login ]] && ssh-add --apple-load-keychain
+# [[ -o login ]] && ssh-add --apple-load-keychain
 
 # Customize to your needs...
 # SM [2017-10-25]: move /usr/local/bin before the path to override system installs in favor of homebrew installs
-PATH=~/bin:/usr/local/bin:$PATH:/usr/local/sbin
+PATH=~/bin:/opt/homebrew/bin:/usr/local/bin:$PATH:/usr/local/sbin
 bindkey "^[." insert-last-word
 
-# CHTF - https://github.com/Yleisradio/chtf
-#
-# Uncomment and change the value to override the default:
-#CHTF_AUTO_INSTALL="ask" # yes/no/ask
-#
-if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
-    source /usr/local/share/chtf/chtf.sh
-fi
 
 # developer aliases
 alias uuidlower="uuidgen | tr A-Z a-z"
@@ -53,17 +57,15 @@ export GOPATH=$HOME/dev/go
 
 source ~/.zshrc_local
 
-. ~/dev/share/azure-cli/az.completion
-
 autoload -U +X bashcompinit && bashcompinit
+. ~/dev/share/azure-cli/az.completion
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-. /usr/local/opt/asdf/libexec/asdf.sh
-
-# Set up the bin directory for pipx
 PATH=$PATH:~/.local/bin
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

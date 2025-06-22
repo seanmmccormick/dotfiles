@@ -64,11 +64,6 @@ export NVM_DIR="$HOME/.nvm"
 
 . /usr/local/opt/asdf/libexec/asdf.sh
 
-# Initialize pyenv and virtualenv to python 3.11
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# Set up the bin directory for pipx 
+# Set up the bin directory for pipx
 PATH=$PATH:~/.local/bin
 

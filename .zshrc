@@ -14,11 +14,11 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #export ZSH_THEME="robbyrussell"
 
-# Commented out Dec, 6, '24
-# export ZSH_THEME="xiong-chiamiov-plus-2"
+# Commented out Dec, 6, '24, reverted jun '25
+export ZSH_THEME="xiong-chiamiov-plus-2"
 
 # Testing Powerlevel10k 12/6/24
-export ZSH_THEME="powerlevel10k/powerlevel10k"
+# export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
@@ -64,8 +64,15 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+nvm install --lts
+nvm use --lts
 
 PATH=$PATH:~/.local/bin
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# pnpm
+export PNPM_HOME="/Users/seanm/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

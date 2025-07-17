@@ -4,5 +4,4 @@
 .idea
 *.sw?
 .vim/.netrwhist
-.vim/bundle
 .oh-my-zsh/cache

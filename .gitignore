@@ -5,3 +5,4 @@
 *.sw?
 .vim/.netrwhist
 .oh-my-zsh/cache
+.vim/bundle
